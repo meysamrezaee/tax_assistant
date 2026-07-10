@@ -1,6 +1,7 @@
 # Tax Assistant
 
 A full-stack Retrieval-Augmented Generation (RAG) chatbot designed to answer tax-related questions using official Canadian tax documents.
+
 The application combines FastAPI, Next.js, ChromaDB, LangChain, and Ollama to provide document-grounded responses with page-level source citations. Unlike traditional chatbots, answers are generated from retrieved tax documents rather than relying solely on LLM knowledge.
 
 ## Key Highlights
@@ -16,6 +17,7 @@ The application combines FastAPI, Next.js, ChromaDB, LangChain, and Ollama to pr
 
 ## Project Structure
 
+```text
 tax_assistant/
 ├── frontend/          → Next.js front-end (chat UI)
 ├── backend/           → FastAPI back-end
@@ -30,7 +32,7 @@ tax_assistant/
 ├── README.md
 ├── .gitignore
 └── screenshot.png
-
+```
 
 ## Features
 
@@ -48,6 +50,7 @@ tax_assistant/
 
 ## Architecture
 
+```text
 User Question
       ↓
 FastAPI API
@@ -63,16 +66,20 @@ Prompt Construction
 Ollama LLM
       ↓
 Response + Source Citations
+```
 
 
 ## Tech Stack
 
-Front-End:   Next.js (React), TypeScript, Tailwind CSS
-Back-End:    Python (FastAPI)
-LLM:         Ollama (Llama 3, Mistral)
-API Type:    REST (optional upgrade to WebSocket)
-RAG Components: LangChain, ChromaDB, Hugging Face Embeddings, PyPDFLoader
-Embedding Model: BAAI/bge-small-en-v1.5
+| Component | Technology |
+|------------|------------|
+| Front-End | Next.js, React, TypeScript, Tailwind CSS |
+| Back-End | FastAPI (Python) |
+| LLM | Ollama (Llama 3, Mistral) |
+| Vector Store | ChromaDB |
+| RAG Framework | LangChain |
+| Embeddings | BAAI/bge-small-en-v1.5 |
+| Document Loader | PyPDFLoader |
 
 
 ## Skills Demonstrated
@@ -94,14 +101,13 @@ Embedding Model: BAAI/bge-small-en-v1.5
 
 ## Getting Started
 
-## Getting Started
-
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/meysamrezaee/tax_assistant.git
 cd tax_assistant
 ```
+
 
 ### 2. Create Environment Files
 
@@ -326,24 +332,11 @@ Example request:
 ```
 
 
-## Roadmap
-
-[x] FastAPI back-end
-[x] Next.js front-end
-[x] Ollama integration
-[x] Session-based chat memory
-[x] Dynamic model selection
-[x] PDF ingestion pipeline
-[x] ChromaDB vector storage
-[x] Retrieval-Augmented Generation (RAG)
-[x] Source citations
-
-
 ## Disclaimer
 
-This application was developed as a software engineering and AI portfolio project to demonstrate Retrieval-Augmented Generation (RAG), document retrieval, and local LLM integration.
-It is not intended to provide professional tax advice. Users should verify all information against official government publications and consult a qualified tax professional when appropriate.
-The author is not responsible for any financial, legal, or tax-related outcomes resulting from the use of this software.
+- This application was developed as a software engineering and AI portfolio project to demonstrate Retrieval-Augmented Generation (RAG), document retrieval, and local LLM integration.
+- It is not intended to provide professional tax advice. Users should verify all information against official government publications and consult a qualified tax professional when appropriate.
+- The author is not responsible for any financial, legal, or tax-related outcomes resulting from the use of this software.
 
 
 ## License
@@ -356,10 +349,10 @@ MIT License – free to use, modify, and distribute.
 Created by Meysam Rezaee
 
 Built using:
-FastAPI
-Next.js
-LangChain
-ChromaDB
-Ollama
-Open-source language models
 
+- FastAPI
+- Next.js
+- LangChain
+- ChromaDB
+- Ollama
+- Open-source language models
